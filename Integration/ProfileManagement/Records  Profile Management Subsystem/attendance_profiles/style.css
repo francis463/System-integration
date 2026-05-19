@@ -1,0 +1,503 @@
+/* Google Font & Base Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f7fc;
+    color: #1e2a3e;
+    line-height: 1.5;
+}
+
+
+/* Modern Header */
+.modern-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.modern-header h1 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.modern-header .lead {
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Filter Card (Left Side) */
+.filter-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-header-custom {
+    background: #f8fafc;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.card-header-custom h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0f3b5c;
+}
+
+.card-body-custom {
+    padding: 1.5rem;
+}
+
+.filter-section {
+    margin-bottom: 1rem;
+}
+
+.modern-select, .modern-input {
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    background-color: #ffffff;
+}
+
+.modern-select:focus, .modern-input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 0 3px rgba(42,82,152,0.2);
+    outline: none;
+}
+
+/* Search wrapper with clear button - PERFECT POSITIONING */
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding-right: 2.5rem;
+    width: 100%;
+}
+
+.clear-search {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #94a3b8;
+    transition: color 0.2s;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+.clear-search:hover {
+    color: #ef4444;
+}
+
+/* Day Selector Card */
+.day-selector-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #eef2f6;
+}
+
+.day-pill {
+    background: #f1f5f9;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    color: #334155;
+}
+
+.day-pill:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+.day-pill.active {
+    background: #2a5298;
+    color: white;
+    box-shadow: 0 4px 8px rgba(42,82,152,0.3);
+}
+
+/* Subject Groups */
+.subject-group {
+    background: white;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+    border: 1px solid #edf2f7;
+}
+
+.subject-header {
+    background: linear-gradient(98deg, #f9fafb 0%, #ffffff 100%);
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #eef2f6;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subject-header i {
+    color: #2a5298;
+    margin-right: 8px;
+}
+
+.schedule-badge {
+    background: #f8fafc;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #2c3e66;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.schedule-badge span {
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.schedule-badge i {
+    color: #3b82f6;
+}
+
+/* Student Cards */
+.student-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -12px rgba(0,0,0,0.15);
+    border-color: #cbd5e1;
+    background: #fefefe;
+}
+
+.student-name {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: #0f172a;
+}
+
+.student-meta {
+    font-size: 0.75rem;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.student-meta i {
+    width: 16px;
+    color: #3b82f6;
+}
+
+/* Modal Modern */
+.modal-content {
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.view-field {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.mode-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+.mode-banner.view-mode {
+    background: #eef2ff;
+    border-left: 5px solid #3b82f6;
+    color: #1e3a8a;
+}
+
+.mode-banner.edit-mode {
+    background: #fffbeb;
+    border-left: 5px solid #f59e0b;
+    color: #b45309;
+}
+
+/* Total Students Badge */
+#totalStudentsBadge {
+    background: rgba(255,255,255,0.2) !important;
+    color: white !important;
+    backdrop-filter: blur(4px);
+    font-size: 0.9rem;
+    border-radius: 40px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .modern-header h1 {
+        font-size: 1.6rem;
+    }
+    .day-pill {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+    .schedule-badge {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .student-card {
+        padding: 0.8rem;
+    }
+}
+
+/* Existing styles remain, then add: */
+
+/* Toast custom styling */
+.toast-container {
+    z-index: 1050;
+}
+
+.toast {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.02);
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.95);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.toast-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+.toast-header i {
+    font-size: 1.2rem;
+}
+
+.toast-body {
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+/* Success toast icon override */
+.toast .text-success {
+    color: #10b981 !important;
+}
+
+.toast .text-danger {
+    color: #ef4444 !important;
+}
+
+/* Teacher Cards */
+.teacher-card {
+    background: white;
+    border-radius: 24px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    height: 100%;
+}
+.teacher-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+}
+.teacher-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+    border: 3px solid #2a5298;
+    background: #f1f5f9;
+}
+.teacher-card h5 {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.teacher-card .small {
+    font-size: 0.8rem;
+}
+
+/* Modern Header */
+.modern-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+/* Filter Card */
+.filter-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.card-header-custom {
+    background: #f8fafc;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.card-body-custom { padding: 1.5rem; }
+.modern-select, .modern-input {
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 1rem;
+}
+.modern-select:focus, .modern-input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 0 3px rgba(42,82,152,0.2);
+}
+
+/* Search clear button */
+.search-wrapper { position: relative; }
+#searchInput { padding-right: 2.5rem; }
+.clear-search {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #94a3b8;
+    display: none;
+}
+.clear-search:hover { color: #ef4444; }
+
+/* Day pills */
+.day-selector-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+    border: 1px solid #eef2f6;
+}
+.day-pill {
+    background: #f1f5f9;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    transition: all 0.2s;
+}
+.day-pill.active {
+    background: #2a5298;
+    color: white;
+    box-shadow: 0 4px 8px rgba(42,82,152,0.3);
+}
+
+/* Subject groups */
+.subject-group {
+    background: white;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid #edf2f7;
+}
+.subject-header {
+    background: #f9fafb;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid #eef2f6;
+}
+.schedule-badge {
+    background: #f8fafc;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.schedule-badge span {
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Student cards */
+.student-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #eef2f6;
+}
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -12px rgba(0,0,0,0.15);
+}
+.student-name { font-weight: 700; }
+.student-meta { font-size: 0.75rem; color: #475569; }
+
+/* Teacher sidebar list */
+.list-group-item-action { cursor: pointer; }
+.list-group-item-action:hover { background-color: #eef2ff; }
+
+/* Toast customization */
+.toast-container { z-index: 1050; }
+.toast {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modern-header h1 { font-size: 1.6rem; }
+    .day-pill { padding: 0.4rem 1rem; font-size: 0.75rem; }
+    .schedule-badge { flex-direction: column; }
+}
